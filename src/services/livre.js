@@ -56,7 +56,7 @@ const getById = async(req,res) => {
     }
 
     if(livre != null){
-        res.status(200).send(data)
+        res.status(200).send(livre)
         
     }else{
         res.status(500).send("Aucun livre")
@@ -82,12 +82,12 @@ const update = async(req,res) => {
     }
 
 
-    if(livre != null){
-        res.status(200).send(data)   
-    }else{
-        res.status(500).send("Echec")
-        return 
-    }
+    // if(livre != null){
+    //     res.status(200).send(data)   
+    // }else{
+    //     res.status(500).send("Echec")
+    //     return 
+    // }
     
     res.status(200).send(livre)
 }

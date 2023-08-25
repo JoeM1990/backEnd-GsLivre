@@ -3,12 +3,12 @@ const livreRoute =  require('../services/livre.js')
 const router = require('express').Router()
 
 
-router.post('/livre', verifyToken,livreRoute.create)
-router.get('/livre', verifyToken, livreRoute.getAll)
-router.get('/livre/:id',  verifyToken,livreRoute.getById)
-router.delete('/livres', verifyToken, livreRoute.destroyAll)
-router.delete('/livre/:id', verifyToken, livreRoute.destroyById)
-router.put('/livre/:id', verifyToken, livreRoute.update)
+router.post('/livre', livreRoute.create)
+router.get('/livre',  livreRoute.getAll)
+router.get('/livre/:id',  livreRoute.getById)
+router.delete('/livres',  livreRoute.destroyAll)
+router.delete('/livre/:id',  livreRoute.destroyById)
+router.put('/livre/:id',  livreRoute.update)
 
 
 
